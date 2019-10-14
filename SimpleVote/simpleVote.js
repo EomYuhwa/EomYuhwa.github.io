@@ -1,6 +1,5 @@
-let contractAddress = '0x4fce069e9ca37626e6013c36f65b9af4b8bd7ec0';
+let contractAddress = '0x74439ff4d9b818dcf7a5aef75e8e77cf45057446';
 let abi =
-
 [
 	{
 		"constant": false,
@@ -114,6 +113,20 @@ let abi =
 		"constant": true,
 		"inputs": [],
 		"name": "getTicketCount",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getTicketPrice",
 		"outputs": [
 			{
 				"name": "",
