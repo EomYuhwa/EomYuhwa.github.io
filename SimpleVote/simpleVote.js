@@ -273,12 +273,10 @@ function getTokenInfo() {
     document.getElementById('tickets-sellable').innerHTML = r.toString();
   });
 
-/*
   simpleVote.getTicketPrice(function(e,r){
     tokenPrice = parseFloat(web3.fromWei(r.toString()));
     document.getElementById('ticket-cost').innerHTML = tokenPrice + "ETH";
   });
-*/
 
   web3.eth.getBalance(simpleVote.address, function(e,v) {
     document.getElementById('contract-balance').innerHTML = web3.fromWei(v.toString()) + "ETH";
@@ -286,13 +284,12 @@ function getTokenInfo() {
 }
 
 function getCandidateInfo() {
-      document.getElementById('day_votes_1').innerHTML = "Monday";
-      document.getElementById('day_votes_2').innerHTML = "Tuesday";
-      document.getElementById('day_votes_3').innerHTML = "Wednesday";
-      document.getElementById('day_votes_4').innerHTML = "Thursday";
-      document.getElementById('day_votes_5').innerHTML = "Friday";
-      document.getElementById('day_votes_6').innerHTML = "Saturday";
-      document.getElementById('day_votes_7').innerHTML = "Sunday";
+  simpleVote.getCandidatesTicket(function(e,r){
+   for(let i=1;<=r.length;i++)
+   {
+    document.getElementByld('day_votes_' + i).innerHTML = r[i-1].toString();
+   }
+ });      
 }
 
 function voteForCandidate() {
