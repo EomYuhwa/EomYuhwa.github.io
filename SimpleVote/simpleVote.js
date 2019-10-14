@@ -259,7 +259,7 @@ function getEther() {
 }
 
 function getToken() {
-  simpleVote.getTicketsCount(function(e,r){
+  simpleVote.getTicketCount(function(e,r){
     document.getElementById('ticketValue').innerHTML = r.toString();
   });
 }
