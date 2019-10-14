@@ -286,13 +286,13 @@ function getTokenInfo() {
 }
 
 function getCandidateInfo() {
-      document.getElementById('day_votes_' + i).innerHTML = "Monday";
-      document.getElementById('day_votes_' + i).innerHTML = "Tuesday";
-      document.getElementById('day_votes_' + i).innerHTML = "Wednesday";
-      document.getElementById('day_votes_' + i).innerHTML = "Thursday";
-      document.getElementById('day_votes_' + i).innerHTML = "Friday";
-      document.getElementById('day_votes_' + i).innerHTML = "Saturday";
-      document.getElementById('day_votes_' + i).innerHTML = "Sunday";
+      document.getElementById('day_votes_1').innerHTML = "Monday";
+      document.getElementById('day_votes_2').innerHTML = "Tuesday";
+      document.getElementById('day_votes_3').innerHTML = "Wednesday";
+      document.getElementById('day_votes_4').innerHTML = "Thursday";
+      document.getElementById('day_votes_5').innerHTML = "Friday";
+      document.getElementById('day_votes_6').innerHTML = "Saturday";
+      document.getElementById('day_votes_7').innerHTML = "Sunday";
 }
 
 function voteForCandidate() {
