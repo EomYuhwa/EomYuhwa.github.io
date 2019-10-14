@@ -298,7 +298,7 @@ function getTokenInfo() {
 
 function getCandidateInfo() {
   simpleVote.getCandidatesTicket(function(e,r){
-   for(let i=1;<=r.length;i++)
+   for(let i=1;i<=r.length;i++)
    {
     document.getElementByld('day_votes_' + i).innerHTML = r[i-1].toString();
    }
