@@ -1,85 +1,7 @@
-let contractAddress = '0x285c365063d5d37D86a4eb7b258c0A00fFb58b4E';
+let contractAddress = '0x4fce069e9ca37626e6013c36f65b9af4b8bd7ec0';
 let abi =
+
 [
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "getTotalTicket",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "getTicketPrice",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "getSellableTicket",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "candidate",
-				"type": "bytes32"
-			}
-		],
-		"name": "existCandidate",
-		"outputs": [
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "candidate",
-				"type": "bytes32"
-			},
-			{
-				"name": "count",
-				"type": "uint256"
-			}
-		],
-		"name": "vote",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
 	{
 		"constant": false,
 		"inputs": [],
@@ -90,31 +12,21 @@ let abi =
 		"type": "function"
 	},
 	{
-		"constant": true,
-		"inputs": [],
-		"name": "getTicketsReceive",
-		"outputs": [
+		"constant": false,
+		"inputs": [
 			{
-				"name": "",
-				"type": "uint256[]"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "getTicketsHave",
-		"outputs": [
+				"name": "name",
+				"type": "bytes32"
+			},
 			{
-				"name": "",
+				"name": "num",
 				"type": "uint256"
 			}
 		],
+		"name": "vote",
+		"outputs": [],
 		"payable": false,
-		"stateMutability": "view",
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
@@ -131,6 +43,161 @@ let abi =
 		"payable": false,
 		"stateMutability": "nonpayable",
 		"type": "constructor"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "candidates_Names",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"name": "candidates_ticket",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getCandidatesTicket",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getSellableCount",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getTicketCount",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getTotalCount",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "sellable_count",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "ticket_count",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "token_Price",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "total_count",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
 	}
 ];
 
@@ -192,35 +259,40 @@ function getEther() {
 }
 
 function getToken() {
-  simpleVote.getTicketsHave(function(e,r){
+  simpleVote.getTicketsCount(function(e,r){
     document.getElementById('ticketValue').innerHTML = r.toString();
   });
 }
 
 function getTokenInfo() {
 
-  simpleVote.getTotalTicket(function(e,r){
+  simpleVote.getTotalCount(function(e,r){
     document.getElementById('tickets-total').innerHTML = r.toString();
   });
-  simpleVote.getSellableTicket(function(e,r){
+  simpleVote.getSellableCount(function(e,r){
     document.getElementById('tickets-sellable').innerHTML = r.toString();
   });
+
+/*
   simpleVote.getTicketPrice(function(e,r){
     tokenPrice = parseFloat(web3.fromWei(r.toString()));
     document.getElementById('ticket-cost').innerHTML = tokenPrice + "ETH";
   });
+*/
+
   web3.eth.getBalance(simpleVote.address, function(e,v) {
     document.getElementById('contract-balance').innerHTML = web3.fromWei(v.toString()) + "ETH";
   });
 }
 
 function getCandidateInfo() {
-  simpleVote.getTicketsReceive(function(e,r){
-    for(let i=1;i<=r.length;i++)
-    {
-      document.getElementById('day_votes_' + i).innerHTML = r[i-1].toString();
-    }
-  });
+      document.getElementById('day_votes_' + i).innerHTML = "Monday";
+      document.getElementById('day_votes_' + i).innerHTML = "Tuesday";
+      document.getElementById('day_votes_' + i).innerHTML = "Wednesday";
+      document.getElementById('day_votes_' + i).innerHTML = "Thursday";
+      document.getElementById('day_votes_' + i).innerHTML = "Friday";
+      document.getElementById('day_votes_' + i).innerHTML = "Saturday";
+      document.getElementById('day_votes_' + i).innerHTML = "Sunday";
 }
 
 function voteForCandidate() {
